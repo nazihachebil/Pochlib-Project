@@ -87,7 +87,7 @@ function displayResults(response){
       }
       if(item1.volumeInfo.imageLinks==null)
       {
-          bookImg1="/image/unavailable.png";
+          bookImg1="/unavailable.png";
       }
       else{
           bookImg1=item1.volumeInfo.imageLinks.thumbnail;
