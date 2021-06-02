@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+        <link rel="stylesheet" href="./index.css"/>
+        
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Poch'Lib</title>
+    </head>
+    <body>
+        <div id="myBooks" class="container mt-4">
+          <h1 class="display-4 text-center"> 
+            <img src="image/logo.png"  alt="logo" width="100" height="100">
+            
+            <h1 class="title grey-bg-title">Poch'Lib</h1>
+            <h2 class="h2">Nouveau Livre</h2>
+            <h2><input type="submit" id="add-button" value="Ajouter un livre" onclick="showForm()" class="btn btn-primary button-style"></h2>
+            <form id="book-form" style="display: none;">
+              <div class="form-group">
+                  <label for="title">Titre du livre</label>
+                  <input type="text" id="title" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="author">Auteur</label>
+                <input type="text" id="author" class="form-control">
+              </div>  
+              <h2><button  Class="btn-primary btn button-style">Rechercher</button></h2>
+              <h2><button type="reset" Class="btn-danger btn button-style"  onclick="window.location.reload();">Annuler</button></h2>
+           </form>
+           <div class="book-list" style="display: none;" id="book-list">
+              <hr>
+                 <h2 class="h2">Résultats de recherche</h2><br>
+                 <div id="result-research" class="cards"></div>
+            </div><hr>
+            <div id="content" >
+                <h2 class="h2">Ma poch'liste</h2><br>
+                <div id="poch-list" class="cards"></div>
+            </div>
+          </h1>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+
