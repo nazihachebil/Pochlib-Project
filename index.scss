@@ -9,7 +9,7 @@ $font-size1: 24px;  /* Preferred icon size */
 $font-size2: 10px;
 $font-size3:5px;
 $font-size4:12px;
-$font-size5:20px;
+$font-size5:15px;
 $display1: inline-block;
 $display2: flex;
 $line-height: 1;
@@ -36,10 +36,13 @@ $height5:100px !important;
 $height6:300px;
 $height7:280px;
 $height8:150px !important;
+$height9: 380px;
+$height10: 150px!important;
 $width3:25%;
 $width4:40%;
 $width5:30%;
 $width6:60%;
+
 $margin-bottom:30px;
 $position: center;
 $object-fit: contain;
@@ -255,21 +258,13 @@ flex-direction: $flex-direction;
   
   @media (min-width: 1025px) and (max-width: 1280px) {
     .text-Card{
-      font: size 20px;
+      @include contentfontsize($font-size2);
    
     }
-    .cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      flex-direction: row;
-      
-    }
-    .col-style{
-      width: 450px;
-      height: 380px;
-      margin-bottom:30px;
-      
+   
+   
+    .im-style{
+      height:$height10;
     }
   }
   

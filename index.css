@@ -140,7 +140,7 @@
   }
 
   .titl-card {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
   }
 
@@ -162,7 +162,7 @@
   }
 
   .titl-card {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
   }
 
@@ -176,19 +176,10 @@
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
   .text-Card {
-    font: size 20px;
+    font-size: 10px;
   }
 
-  .cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-
-  .col-style {
-    width: 450px;
-    height: 380px;
-    margin-bottom: 30px;
+  .im-style {
+    height: 150px !important;
   }
 }/*# sourceMappingURL=index.css.map */
