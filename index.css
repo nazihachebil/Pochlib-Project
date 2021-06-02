@@ -1,0 +1,194 @@
+/* declare variables */
+/* Preferred icon size */
+.material-icons {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.iconcolor {
+  color: #0f8165;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.col-style {
+  width: 450px;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+.im-style {
+  width: 15rem;
+  height: 100px !important;
+  display: flex;
+  position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  bottom: 0;
+}
+
+/* Style the counter cards */
+.thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.id-style {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.text-Card {
+  font-size: 10px;
+}
+
+.button-style {
+  width: 25%;
+}
+
+.grey-bg-title {
+  background-color: #b3aeae;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #0f8165 !important;
+  border-color: #0f8165 !important;
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 379px
+*/
+@media (min-width: 320px) and (max-width: 379px) {
+  .text-Card {
+    font-size: 5px;
+  }
+
+  .titl-card {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .button-style {
+    width: 60%;
+  }
+
+  .col-style {
+    height: 280px;
+  }
+
+  .im-style {
+    height: 80px !important;
+  }
+}
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 380px to 479px
+*/
+@media (min-width: 380px) and (max-width: 480px) {
+  .text-Card {
+    font-size: 5px;
+  }
+
+  .titl-card {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .button-style {
+    width: 60%;
+  }
+
+  .col-style {
+    height: 300px;
+  }
+
+  .im-style {
+    height: 100px !important;
+  }
+}
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  .text-Card {
+    font-size: 12px;
+  }
+
+  .titl-card {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .button-style {
+    width: 30%;
+  }
+
+  .im-style {
+    height: 150px !important;
+  }
+}
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .text-Card {
+    font-size: 12px;
+  }
+
+  .titl-card {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .im-style {
+    height: 280px;
+  }
+}
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .text-Card {
+    font: size 20px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .col-style {
+    width: 450px;
+    height: 380px;
+    margin-bottom: 30px;
+  }
+}/*# sourceMappingURL=index.css.map */

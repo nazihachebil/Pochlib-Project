@@ -1,0 +1,276 @@
+/* declare variables */
+
+$font-family: 'Material Icons';
+$font-weight1: normal;
+$font-style1: normal;
+$font-style2:italic; 
+$font-weight2: bold;
+$font-size1: 24px;  /* Preferred icon size */
+$font-size2: 10px;
+$font-size3:5px;
+$font-size4:12px;
+$font-size5:20px;
+$display1: inline-block;
+$display2: flex;
+$line-height: 1;
+$text-transform: none;
+$letter-spacing: normal;
+$word-wrap: normal;
+$white-space: nowrap;
+$direction: ltr;
+$-webkit-font-smoothing: antialiased;
+$text-rendering: optimizeLegibility;
+$-moz-osx-font-smoothing: grayscale;
+$font-feature-settings: 'liga';
+$color:rgb(15, 129, 101) ;
+$justify-content: center;
+$flex-wrap: wrap;
+$flex-direction: row;
+$width1: 450px;
+$height1: 400px;
+$width2: 15rem;
+$height2: 100px!important;
+$height3:280px;
+$height4:80px !important;
+$height5:100px !important;
+$height6:300px;
+$height7:280px;
+$height8:150px !important;
+$width3:25%;
+$width4:40%;
+$width5:30%;
+$width6:60%;
+$margin-bottom:30px;
+$position: center;
+$object-fit: contain;
+$bottom:0;
+$padding-bottom: 60%;
+$background-size: cover;
+$background-position: center center;
+$background-color1: rgb(179, 174, 174);
+$background-color2: rgb(15, 129, 101) !important;
+$border-color:  rgb(15, 129, 101) !important;
+$min-width-mobile: 380px;
+$max-width-mobile: 480px;
+$min-width-mobile1: 320px;
+$max-width-mobile1:379px;
+$min-width-tablet: 481px;
+$max-width-tablet: 767px;
+$min-width-tabletland: 768px;
+$max-width-tabletland: 1024px;
+$orientation: landscape;
+
+
+@mixin contentfont($font-style, $font-weight) {
+    font-style: $font-style; 
+    font-weight: $font-weight;
+}
+@mixin contentfontsize($font-size) {
+    font-size: $font-size; 
+}
+@mixin contentsize($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin contentdisplay($display){
+    display: $display;
+}
+@mixin contentbackgroundcolor($background-color){
+    background-color: $background-color;
+}
+
+.material-icons {
+    font-family: $font-family;
+    @include contentfont($font-style1,$font-weight1);
+    @include contentfontsize($font-size1);
+    @include contentdisplay($display1);
+    line-height: $line-height;
+    text-transform: $text-transform;
+    letter-spacing: $letter-spacing;
+    word-wrap: $word-wrap;
+    white-space: $white-space;
+    direction: $direction;
+    
+  /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: $-webkit-font-smoothing;
+    /* Support for Safari and Chrome. */
+    text-rendering: $text-rendering;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: $-moz-osx-font-smoothing;
+  
+    /* Support for IE. */
+    font-feature-settings: $font-feature-settings;
+}
+.iconcolor {
+    color: $color;
+} 
+
+.cards {
+ @include contentdisplay($display2);
+justify-content: $justify-content;
+flex-wrap: $flex-wrap;
+flex-direction: $flex-direction;
+
+}
+
+.col-style{
+    @include contentsize($width1,$height1);
+    margin-bottom:$margin-bottom;
+}
+.im-style{
+   @include contentsize($width2,$height2);
+    display: $display2;
+    position: $position;
+    object-fit: $object-fit;
+    bottom:$bottom;
+}
+
+/* Style the counter cards */
+.thumb {
+    padding-bottom: $padding-bottom;
+    background-size: $background-size;
+    background-position: $background-position;
+}
+
+.id-style {
+    @include contentfont($font-style2,$font-weight2);
+}
+
+.text-Card{
+    @include contentfontsize($font-size2);
+}
+
+.button-style{
+    width:$width3;
+}
+.grey-bg-title {
+    @include contentbackgroundcolor($background-color1);
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    @include contentbackgroundcolor($background-color2);
+    border-color: $border-color;
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 379px
+*/
+@media (min-width: $min-width-mobile1) and (max-width: $max-width-mobile1) {
+  
+  .text-Card{
+      @include contentfontsize($font-size3);
+ 
+  }
+  .titl-card{
+    @include contentfontsize($font-size4);
+    font-weight: $font-weight2;
+  }
+  .button-style{
+    width:$width6;
+  }
+  .col-style{
+    height:$height3;
+  }
+  .im-style{
+    height:$height4;
+  }
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 380px to 479px
+*/
+
+@media (min-width: $min-width-mobile) and (max-width: $max-width-mobile) {
+  
+    .text-Card{
+        @include contentfontsize($font-size3);
+   
+    }
+    .titl-card{
+      @include contentfontsize($font-size4);
+      font-weight: $font-weight2;
+    }
+    .button-style{
+      width:$width6;
+    }
+    .col-style{
+      height:$height6;
+    }
+    .im-style{
+      height:$height5;
+    }
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: $min-width-tablet) and (max-width: $max-width-tablet) {
+    
+    .text-Card{
+        @include contentfontsize($font-size4);
+    
+    }
+    .titl-card{
+      @include contentfontsize($font-size5);
+      font-weight: $font-weight2;
+    }
+    .button-style{
+      width:$width5;
+    }
+    .im-style{
+      height:$height8;
+    }
+}
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: $min-width-tabletland) and (max-width: $max-width-tabletland) and (orientation: $orientation) {
+    
+    .text-Card{
+        @include contentfontsize($font-size4);
+     
+    }
+    .titl-card{
+      @include contentfontsize($font-size5);
+      font-weight: $font-weight2;
+    }
+    
+    .im-style{
+      height:$height7;
+    }
+
+  }
+ 
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .text-Card{
+      font: size 20px;
+   
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      
+    }
+    .col-style{
+      width: 450px;
+      height: 380px;
+      margin-bottom:30px;
+      
+    }
+  }
+  
+  
