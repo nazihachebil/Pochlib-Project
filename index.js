@@ -159,10 +159,10 @@ else{
 class Store{
   static getBooks(){
     let books;
-    if(localStorage.getItem('books')===null){
+    if(sessionStorage.getItem('books')===null){
         books=[];
     }else{
-        books= JSON.parse(localStorage.getItem('books'));
+        books= JSON.parse(sessionStorage.getItem('books'));
     }
     return books;
   }
@@ -171,7 +171,7 @@ class Store{
 
      books.push(book);
 
-     localStorage.setItem('books',JSON.stringify(books));
+     sessionStorage.setItem('books',JSON.stringify(books));
   }
   static removeBook(isbn){
      const books=Store.getBooks();
@@ -181,7 +181,7 @@ class Store{
          }
      });
 
-     localStorage.setItem('books',JSON.stringify(books));
+     sessionStorage.setItem('books',JSON.stringify(books));
   }
   static findBook(isbn){
     const books=Store.getBooks();
